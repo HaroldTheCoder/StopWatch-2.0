@@ -151,12 +151,11 @@ button span {
     h1 {
         font-size: 2em;
         text-align: center;
+        margin-bottom: 1em;
     }
 
     #title-container p {
-        width: 100%;
-        font-size: 1em;
-        text-align: center;
+        display: none;
     }
 
     #stopwatch {
