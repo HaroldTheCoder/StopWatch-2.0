@@ -17,7 +17,7 @@ const MyStopwatch = () => {
     /* Start, Pause and Reset event on button click */
     startButton.addEventListener('click', ()=> {
         clearInterval(interval)
-       interval = setInterval(startTimer, 10); // Sets time increment by 1 
+       interval = setInterval(startTimer, 9); // Sets time increment by 1 
        if(milliseconds >= 0) {
             startButton.style.display = "none";
             pauseButton.style.display = "block";
