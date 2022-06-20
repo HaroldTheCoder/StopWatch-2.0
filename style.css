@@ -141,7 +141,7 @@ button span {
 }
 
 /* Responsive Style */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
     #main-container {
         flex-direction: column;
         padding: 2em;
