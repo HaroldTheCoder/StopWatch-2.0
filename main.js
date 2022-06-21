@@ -4,7 +4,7 @@ const MyStopwatch = () => {
     const secondsBox = document.querySelector('#seconds');
     const millisecondsBox = document.querySelector('#milliseconds');
     const startButton = document.querySelector('#start');
-    const pauseButton = document.querySelector('#pause');
+    const stopButton = document.querySelector('#stop');
     const resetButton = document.querySelector('#reset');
 
     /* Set time to 00 by default */
@@ -17,17 +17,17 @@ const MyStopwatch = () => {
     /* Start, Pause and Reset event on button click */
     startButton.addEventListener('click', ()=> {
         clearInterval(interval)
-       interval = setInterval(startTimer, 9); // Sets time increment by 1 
+       interval = setInterval(startTimer, 10); // Sets time increment by 1 
        if(milliseconds >= 0) {
             startButton.style.display = "none";
-            pauseButton.style.display = "block";
+            stopButton.style.display = "block";
         }    
     });
 
-    pauseButton.addEventListener('click', ()=> {
+    stopButton.addEventListener('click', ()=> {
         clearInterval(interval)
         if(milliseconds >= 0) {
-            pauseButton.style.display = "none";
+            stopButton.style.display = "none";
             startButton.style.display = "block";
         }    
     });
@@ -56,7 +56,7 @@ const MyStopwatch = () => {
 
         if(milliseconds < 9) {
             millisecondsBox.innerHTML = '0' + milliseconds;
-        } else if (milliseconds === 100) {
+        } else if (milliseconds === 99) {
             seconds++;
             milliseconds = 0;
             secondsBox.innerHTML = '0' + seconds;
@@ -81,3 +81,4 @@ const MyStopwatch = () => {
 }
 // Run function
 MyStopwatch()
+
