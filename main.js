@@ -38,6 +38,10 @@ const MyStopwatch = () => {
         secondsBox.innerHTML = '00';
         millisecondsBox.innerHTML = '00';
 
+        minutes = 00; // Time values back to 0
+        seconds = 00;
+        milliseconds = 00;
+
         if(pauseButton.style.display = "block") {
             pauseButton.style.display = "none";
             startButton.style.display = "block";
@@ -75,6 +79,5 @@ const MyStopwatch = () => {
     }
   
 }
-// Declare function
+// Run function
 MyStopwatch()
-
