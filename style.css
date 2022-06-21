@@ -140,6 +140,22 @@ button span {
     display: none;
 }
 
+#first-button {
+    background-color: rgba(124, 190, 152, 0.596);
+    border-color: rgb(128, 215, 165);
+}
+
+#first-button.stop {
+    background-color: rgba(207, 108, 108, 0.886);
+    border-color: rgb(251, 132, 132);
+}
+
+button:last-child {
+    background-color: #cbcbcb;
+    color: #0c1422;
+    
+}
+
 /* Responsive Style */
 @media screen and (max-width: 850px) {
     #main-container {

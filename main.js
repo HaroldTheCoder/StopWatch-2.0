@@ -6,6 +6,8 @@ const MyStopwatch = () => {
     const startButton = document.querySelector('#start');
     const stopButton = document.querySelector('#stop');
     const resetButton = document.querySelector('#reset');
+    const firstButton = document.querySelector('#first-button');
+
 
     /* Set time to 00 by default */
     let minutes = 00; 
@@ -21,6 +23,8 @@ const MyStopwatch = () => {
        if(milliseconds >= 0) {
             startButton.style.display = "none";
             stopButton.style.display = "block";
+            firstButton.classList.add('stop');
+
         }    
     });
 
@@ -29,6 +33,7 @@ const MyStopwatch = () => {
         if(milliseconds >= 0) {
             stopButton.style.display = "none";
             startButton.style.display = "block";
+            firstButton.classList.remove('stop');
         }    
     });
 
@@ -42,9 +47,11 @@ const MyStopwatch = () => {
         seconds = 00;
         milliseconds = 00;
 
-        if(pauseButton.style.display = "block") {
-            pauseButton.style.display = "none";
+
+        if(stopButton.style.display = "block") {
+            stopButton.style.display = "none";
             startButton.style.display = "block";
+            firstButton.classList.remove('stop');
         }
     });
 
